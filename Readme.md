@@ -58,7 +58,7 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-<b>Machfly is a Beetle, Developing his own Wings to fly, It's real name is Mafli.</b>
+<b>Machfly is a Beetle, Developing his own Wings to fly, It's real name is Mufli.</b>
 
 This project has AIM to achieve top Level in Data Science Including Analytics, Operations, and Calculations viz-a-viz. and Have a Artificial Mind, Seprated Into Different Parts, Contains Difficult Algorithms in C++.
 
