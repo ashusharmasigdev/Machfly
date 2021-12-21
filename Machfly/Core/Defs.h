@@ -10,4 +10,3 @@ typedef char    Char;
 typedef void    Void;
 typedef bool    Bool;
 typedef double  Double;
-typedef string  String;

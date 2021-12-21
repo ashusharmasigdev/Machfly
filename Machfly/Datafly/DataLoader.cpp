@@ -1,4 +1,7 @@
 #include <iostream>
+#include <fstream>
+#include <sstream>
+
 #include <Extras/ErrorFunc.h>
 #include <Datafly/DataLoader.h>
 
@@ -47,7 +50,7 @@ namespace Machfly::Datafly
     {
         /* Extract No. of Instances and Attributes */
         UNumber InstanceSize = this->InstanceSize();
-        UNumber AttributeSize;
+        UNumber AttributeSize = this->AttributeSize();
     }
 
     /// Map the Instances Size
@@ -59,10 +62,15 @@ namespace Machfly::Datafly
 
         if(!_InputFile.is_open())
         {
+            cout << "Given File Path : " << this->_DataFilePath << endl;
             ErrorFunc::ReleaseFatal("\n>> Machfly : Error[DataLoader::InstanceSize] Can't open File!");
         }
+        else
+        {
+            cout << "File Successfully Opened : " << this->_DataFilePath << endl;
+        }
 
-        String Line;
+        string Line;
         size_t Found;
 
         /* Ommiting Lines Containing '#' */
@@ -99,8 +107,8 @@ namespace Machfly::Datafly
             ErrorFunc::ReleaseFatal("\n>> Machfly : Error[DataLoader::InstanceSize] Can't open File!");
         }
 
-        String Line;
-        String Attribute;
+        string Line;
+        string Attribute;
         size_t Found;
 
         /* Ommiting Lines Containing '#' */
@@ -124,6 +132,11 @@ namespace Machfly::Datafly
         _InputFile.close();
 
         return this->NumAttributes;
+    }
+
+    DataLoader::~DataLoader()
+    {
+
     }
 
 } // namespace Machfly::Datafly

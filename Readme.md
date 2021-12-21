@@ -72,6 +72,9 @@ This project has AIM to achieve top Level in Data Science Including Analytics, O
 * Compiled with G++
 * Supports Makefile and Meson as Build System
 
+### Dependencies
+
+* Armadilo [sudo apt-get install libarmadillo-dev] : For Algebra and Scientific Computing.
 
 
 <!-- GETTING STARTED -->
