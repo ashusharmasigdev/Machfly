@@ -17,8 +17,6 @@ namespace Machfly::Datafly
 
         public:
 
-            DataLoader(/* args */);
-
             Void
             LoadData(const DString, UNumber, UNumber);
 
@@ -30,8 +28,6 @@ namespace Machfly::Datafly
 
             UNumber
             AttributeSize();
-
-            ~DataLoader();
 
     };
     

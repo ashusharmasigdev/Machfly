@@ -10,11 +10,6 @@ using namespace Machfly::Extras;
 
 namespace Machfly::Datafly
 {
-    
-    DataLoader::DataLoader()
-    {
-
-    }
 
     /// @param _pFileName       : Path and name of the File containing the Data
     /// @param _pMaxColumns     : Will Limit the Maximum Selection of Columns, If 0, then All
@@ -132,11 +127,6 @@ namespace Machfly::Datafly
         _InputFile.close();
 
         return this->NumAttributes;
-    }
-
-    DataLoader::~DataLoader()
-    {
-
     }
 
 } // namespace Machfly::Datafly

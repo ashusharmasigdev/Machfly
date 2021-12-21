@@ -1,6 +1,7 @@
 /* Tests */
 #include <iostream>
-#include <Datafly/DataLoader.h>
+// #include <Datafly/DataLoader.h>
+#include <Datafly/DataPlain.h>
 
 using namespace Machfly::Datafly;
 
@@ -14,7 +15,7 @@ int main()
 
     AppHeader();
 
-    DataLoader _MyData = DataLoader();
+    DataPlain _MyData;
 
     _MyData.LoadData("Datasets/sample.dat", 0, 0);
     _MyData.ReadFileData();
