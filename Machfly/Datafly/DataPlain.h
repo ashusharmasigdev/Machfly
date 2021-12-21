@@ -3,6 +3,8 @@
 #include <Core/Defs.h>
 #include <Datafly/DataLoader.h>
 
+#include <armadillo>
+
 namespace Machfly::Datafly
 {
     
@@ -11,7 +13,8 @@ namespace Machfly::Datafly
 
         private:
         
-            /* data */
+            arma::mat DataX;    /* X Matrix */
+            arma::vec DataY;    /* Y Vector */
         
         public:
 
