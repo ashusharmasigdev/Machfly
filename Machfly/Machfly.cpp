@@ -1,11 +1,15 @@
 /* Tests */
 #include <iostream>
 
+#include "Parsers/SVDocumentClass.h"
+
 #ifdef MACHFLY_VERSION
 #define MACH_VERSION    MACHFLY_VERSION
 #else
 #define MACH_VERSION    0
 #endif
+
+using namespace Machfly;
 
 void AppHeader()
 {
@@ -16,6 +20,10 @@ int main()
 {
 
     AppHeader();
+
+
+    SVDocument::Document MySVDocument("file", SVDocument::SeparatorArgs(',', true));
+
 
     return 0;
 
