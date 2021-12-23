@@ -1,0 +1,23 @@
+#include "CSVParser.h"
+#include <iostream>
+
+
+namespace Machfly::Parsers
+{
+    
+    Void
+    CSVParserClass::OpenFile(DString _fileName)
+    {
+        // this->FileName = _fileName;
+        
+        // this->File.open(this->FileName, std::ios::in);
+
+        // if(!this->File.is_open())
+        // {
+        //     std::cout<<"Failed to Open CSV"<<std::endl;
+        //     exit(1);
+        // }
+    }
+    
+
+} // namespace Machfly::Parsers
