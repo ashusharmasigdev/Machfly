@@ -22,7 +22,7 @@ int main()
     AppHeader();
 
 
-    SVDocument::Document MySVDocument("Datasets/sample.csv", SVDocument::SeparatorArgs(',', true));
+    SVDocument::Document MySVDocument("Datasets/sample.csv", SVDocument::SeparatorArgs(',', true, false, false, true), SVDocument::LineReaderArgs(false, '#', false), SVDocument::LabelArgs(0, -1));
 
 
     return 0;

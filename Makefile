@@ -13,7 +13,8 @@ GPPPARAMS := \
 	-IMachfly/	\
 	-DMACHFLY_VERSION='"$(MACHFLY_VERSION)"'	\
 	-DBUILD_ID='"$(BUILD_ID)"'	\
-	-DMACHFLY_LISCENCE='"$(MACHFLY_LISCENCE)"'
+	-DMACHFLY_LISCENCE='"$(MACHFLY_LISCENCE)"'	\
+	-fno-stack-protector
 
 
 rwildcard=$(foreach d,$(wildcard $(1:=/*)),$(call rwildcard,$d,$2) $(filter $(subst *,%,$2),$d))
