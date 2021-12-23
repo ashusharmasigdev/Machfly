@@ -36,24 +36,24 @@ namespace Machfly::Datafly
             this->MaxColumns = _pMaxColumns;
         }
 
+        this->_DataFile.open(this->_DataFilePath, ios::in);
+
+        if(!this->_DataFile.is_open())
+        {
+            cout << "Given File Path : " << this->_DataFilePath << endl;
+            ErrorFunc::ReleaseFatal("\n>> Machfly : Error[DataLoader::LoadData] Can't open File!", true);
+        }
+        else
+        {
+            cout << "File Successfully Opened : " << this->_DataFilePath << endl;
+        }
+
     }
 
     /// Map the Instances Size
     UNumber
     DataLoader::InstanceSize()
     {
-        fstream _InputFile;
-        _InputFile.open(this->_DataFilePath, ios::in);
-
-        if(!_InputFile.is_open())
-        {
-            cout << "Given File Path : " << this->_DataFilePath << endl;
-            ErrorFunc::ReleaseFatal("\n>> Machfly : Error[DataLoader::InstanceSize] Can't open File!", true);
-        }
-        else
-        {
-            cout << "File Successfully Opened : " << this->_DataFilePath << endl;
-        }
 
         string Line;
         size_t Found;
@@ -61,21 +61,19 @@ namespace Machfly::Datafly
         /* Ommiting Lines Containing '#' */
         do
         {
-            getline(_InputFile, Line);
+            getline(this->_DataFile, Line);
             Found = Line.find("#");
         } while (Found != string::npos);
 
         /* Extracting number of Instances on File */
-        while (!_InputFile.eof())
+        while (!this->_DataFile.eof())
         {
-            getline(_InputFile, Line);
+            getline(this->_DataFile, Line);
             this->NumInstance++;
         }
 
         cout << "\nNumber of Instances on File : " << this->NumInstance << endl;
         
-        _InputFile.close();
-
         return this->NumInstance;
 
     }
@@ -84,14 +82,6 @@ namespace Machfly::Datafly
     UNumber
     DataLoader::AttributeSize()
     {
-        fstream _InputFile;
-        _InputFile.open(this->_DataFilePath, ios::in);
-
-        if(!_InputFile.is_open())
-        {
-            ErrorFunc::ReleaseFatal("\n>> Machfly : Error[DataLoader::InstanceSize] Can't open File!", true);
-        }
-
         string Line;
         string Attribute;
         size_t Found;
@@ -99,7 +89,7 @@ namespace Machfly::Datafly
         /* Ommiting Lines Containing '#' */
         do
         {
-            getline(_InputFile, Line);
+            getline(this->_DataFile, Line);
             Found = Line.find("#");
         } while (Found != string::npos);
 
@@ -114,9 +104,14 @@ namespace Machfly::Datafly
 
         cout << "\nNumber of Attributes on File : " << this->NumAttributes << endl;
         
-        _InputFile.close();
-
         return this->NumAttributes;
+    }
+    
+
+    Void
+    DataLoader::CloseDataFile()
+    {
+        this->_DataFile.close();
     }
 
 } // namespace Machfly::Datafly

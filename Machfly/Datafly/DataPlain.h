@@ -27,6 +27,10 @@ namespace Machfly::Datafly
 
             Void
             PlainSetting(Number _pDegree, Number _pTranPercent, Number _pTestPercent);
+
+            Void
+            ExtractFeatureX();
+            /* Later Make Dynamic any XYZETC As ExtractFeatureSet("SETNO:49") */
     
     };
     
