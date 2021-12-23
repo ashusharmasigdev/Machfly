@@ -8,6 +8,7 @@
 #pragma once
 
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -34,8 +35,8 @@ namespace Machfly::SVDocument
         private:
 
             string DocumentPath;
-
             SeparatorArgs DocumentSeprator;
+            std::vector<std::vector<std::string>>   DocumentData;
 
         public:
         
@@ -49,7 +50,8 @@ namespace Machfly::SVDocument
 
 
             void ReadDocument();
-
+            void ReadDocument(std::istream& _pStream);
+            void Clear();
 
             ~Document();
     

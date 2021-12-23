@@ -1,5 +1,8 @@
 #include "SVDocumentClass.h"
 
+#include <fstream>
+
+
 namespace Machfly::SVDocument
 {
 
@@ -37,7 +40,28 @@ namespace Machfly::SVDocument
     void Document::ReadDocument()
     {
         /* Read File */
+        std::ifstream fileStream;
+        fileStream.exceptions(std::ifstream::failbit | std::ifstream::badbit);
+        fileStream.open(DocumentPath, std::ios::binary);
 
+        if(!fileStream.is_open())
+        {
+            std::cerr << "SVDocumentParser[ERROR]:Document::ReadDocument()" << std::endl
+                      << "Can't Find Given File!" << endl;
+        }
+
+        ReadDocument(fileStream);
+
+    }
+
+    void Document::ReadDocument(std::istream& _pStream)
+    {
+        Clear();
+    }
+
+    void Document::Clear()
+    {
+        DocumentData.clear();
     }
 
     
