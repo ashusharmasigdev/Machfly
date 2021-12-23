@@ -20,9 +20,6 @@ namespace Machfly::Datafly
             Void
             LoadData(const DString, UNumber, UNumber);
 
-            Void
-            ReadFileData();
-
             UNumber
             InstanceSize();
 

@@ -9,16 +9,9 @@ namespace Machfly::Extras::ErrorFunc
 {
     
     Void
-    ReleaseFatal(const DString _error_comment, Bool _exit_status = true)
-    {
-        cerr << _error_comment << endl;
-        exit(_exit_status);
-    }
+    ReleaseFatal(const DString _error_comment, Bool _exit_status);
 
     Void
-    ReleaseLog(const DString _error_comment)
-    {
-        cout << _error_comment << endl;
-    }
+    ReleaseLog(const DString _error_comment);
 
 } // namespace Machfly::Extras::ErrorFunc

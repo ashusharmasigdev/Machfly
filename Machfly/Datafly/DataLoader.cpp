@@ -38,16 +38,6 @@ namespace Machfly::Datafly
 
     }
 
-
-    /// This Will Read File Data
-    Void
-    DataLoader::ReadFileData()
-    {
-        /* Extract No. of Instances and Attributes */
-        UNumber InstanceSize = this->InstanceSize();
-        UNumber AttributeSize = this->AttributeSize();
-    }
-
     /// Map the Instances Size
     UNumber
     DataLoader::InstanceSize()
@@ -58,7 +48,7 @@ namespace Machfly::Datafly
         if(!_InputFile.is_open())
         {
             cout << "Given File Path : " << this->_DataFilePath << endl;
-            ErrorFunc::ReleaseFatal("\n>> Machfly : Error[DataLoader::InstanceSize] Can't open File!");
+            ErrorFunc::ReleaseFatal("\n>> Machfly : Error[DataLoader::InstanceSize] Can't open File!", true);
         }
         else
         {
@@ -99,7 +89,7 @@ namespace Machfly::Datafly
 
         if(!_InputFile.is_open())
         {
-            ErrorFunc::ReleaseFatal("\n>> Machfly : Error[DataLoader::InstanceSize] Can't open File!");
+            ErrorFunc::ReleaseFatal("\n>> Machfly : Error[DataLoader::InstanceSize] Can't open File!", true);
         }
 
         string Line;

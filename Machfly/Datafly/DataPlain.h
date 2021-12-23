@@ -18,6 +18,9 @@ namespace Machfly::Datafly
         
         public:
 
+            Void
+            ReadFileData();
+
             /// @param _pDegree         : Specified Degree of Polynomial for Feature Mapping, If it is 1 then, Data will unchanged
             /// @param _pTrainPercent   : To Train the Only Part of the Data : Will Convert % to Column Index and will Store only Index
             /// @param _pTestPercent    : To Test the Only Part of the Data : Will Convert % to Column Index and will Store only Index
