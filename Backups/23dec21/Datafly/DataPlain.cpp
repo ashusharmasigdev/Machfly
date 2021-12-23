@@ -28,8 +28,8 @@ namespace Machfly::Datafly
         this->DataY.zeros();
         this->ExtractFeatureY();
 
-        this->_DataX = (Double*)(void*)malloc(InstanceSize*AttributeSize);
-        this->_DataY = (Double*)(void*)malloc(InstanceSize*AttributeSize);
+        // this->_DataX = (Double*)(void*)malloc(InstanceSize*AttributeSize);
+        // this->_DataY = (Double*)(void*)malloc(InstanceSize*AttributeSize);
     }
 
     /// This Will Read File Data
@@ -108,7 +108,7 @@ namespace Machfly::Datafly
             StreamedLine >> Y;
             this->DataY(m) = Y;
 
-            this->_DataY[m] = Y;
+            // this->_DataY[m] = Y;
 
             getline(this->_DataFile, Line);
         }
@@ -118,7 +118,8 @@ namespace Machfly::Datafly
     Double
     DataPlain::GetCellFromFeatureX(Double _pX, Double _pY)
     {
-        return this->DataX(_pX, _pY);
+        // return this->DataX(_pX, _pY);
+        return this->_DataX[0];
     }
 
     Double
