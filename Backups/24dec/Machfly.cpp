@@ -1,7 +1,7 @@
 /* Tests */
 #include <iostream>
 
-#include "Datafly/Machframe.h"
+#include "Datafly/Dataframe.h"
 #include "Parsers/SVDocumentClass.h"
 #include "Parsers/rapidcsv.h"
 
@@ -25,19 +25,15 @@ int main()
 
 
     // SVDocument::Document MySVDocument("Datasets/sample.csv", SVDocument::SeparatorArgs(',', true, false, false, true), SVDocument::LineReaderArgs(false, '#', false), SVDocument::LabelArgs(0, -1));
-    // rapidcsv::Document Doc("Datasets/sample.csv");
+    rapidcsv::Document Doc("Datasets/sample.csv");
 
-    // std::cout << Doc.GetCell<int>(1,3) << std::endl;
+    std::cout << Doc.GetCell<int>(1,3) << std::endl;
 
-    Machframe df;
 
-    // df.SetSize(8,60);   /* ColName, RowName */
-    // df.SetCell<std::string>(0, 0, "aa");
-    // df.LoadSVDocument("Datasets/sample.csv", ",");
-    df.LoadSVDocument("Datasets/sample.csv");
+    Datafly::Dataframe df;
+    // df[12,34] << fg;
+    df.SetRow("gh", rowdata);   /* rowdata will be in string */
 
-    df.PrintDataGrid();
-    
 
     return 0;
 

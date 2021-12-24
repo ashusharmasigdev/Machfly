@@ -114,11 +114,16 @@ namespace Machfly::SVDocument
     {
         const std::streamsize _BufferLength = 64 * 1024;
         std::vector<char> Buffer(_BufferLength);
+                
         std::vector<std::string> row;
         std::string cell;
         bool Quoted = false;
         int cr = 0;
         int lf = 0;
+
+        Buffer.clear();
+        row.clear();
+        cell.clear();
 
         while (_pFileLength)
         {

@@ -1,0 +1,13 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/nebula/Projects/_/Machfly'
+echo !=== COMPILING Machfly/Extras/ErrorFunc.cpp
+mkdir -p Build/Extras
+g++ -IMachfly/ -DMACHFLY_VERSION='"0.1"' -DBUILD_ID='"20210420_xCsbbwuwnwop"' -DMACHFLY_LISCENCE='"Copyright@2021"' -fno-stack-protector -c -o Build/Extras/ErrorFunc.o Machfly/Extras/ErrorFunc.cpp
+echo !=== COMPILING Machfly/Machfly.cpp
+mkdir -p Build
+g++ -IMachfly/ -DMACHFLY_VERSION='"0.1"' -DBUILD_ID='"20210420_xCsbbwuwnwop"' -DMACHFLY_LISCENCE='"Copyright@2021"' -fno-stack-protector -c -o Build/Machfly.o Machfly/Machfly.cpp
+echo !=== COMPILING Machfly/Parsers/SVDocumentClass.cpp
+mkdir -p Build/Parsers
+g++ -IMachfly/ -DMACHFLY_VERSION='"0.1"' -DBUILD_ID='"20210420_xCsbbwuwnwop"' -DMACHFLY_LISCENCE='"Copyright@2021"' -fno-stack-protector -c -o Build/Parsers/SVDocumentClass.o Machfly/Parsers/SVDocumentClass.cpp
+make: Leaving directory '/home/nebula/Projects/_/Machfly'
+ 
