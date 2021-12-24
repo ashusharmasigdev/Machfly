@@ -12,13 +12,14 @@
 #pragma once
 
 #include <Genric/Filestream.h>
+#include <SVDocument/SVDocumentParser.h>
 
 using namespace Machfly::Genric;
 
 namespace Machfly::SVDocumentSpace
 {
     
-    class SVDocument : public Filestream
+    class SVDocument : public SVDocumentParser
     {
 
         public:

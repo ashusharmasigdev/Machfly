@@ -13,6 +13,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <vector>
 
 namespace Machfly::Genric
 {
@@ -33,11 +34,19 @@ namespace Machfly::Genric
 
             void OpenFile(const StreamingState& _pState);
 
+            std::fstream& RetreiveStream();
+
+            std::vector<std::string> GetDocumentLines();
+
+            inline bool GetFileStatus() { return OpenStatus; }
+            inline StreamingState GetStreamStatus() { return DefaultStreamState; }
+
         private:
 
             std::string FilePath;
             std::fstream File;
-            StreamingState DefaultStreamState;
+            bool OpenStatus = false;
+            StreamingState DefaultStreamState = StreamingState::IN;
     
     };
 

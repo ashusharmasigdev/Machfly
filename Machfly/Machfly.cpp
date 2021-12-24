@@ -23,11 +23,14 @@ int main()
     AppHeader();
 
     /* Filestream Test */
-    Genric::Filestream MyFile("Datasets/sample.csv");
-    MyFile.OpenFile(Genric::StreamingState::IN);
+    // Genric::Filestream MyFile("../Datasets/sample.csv");
+    // MyFile.OpenFile(Genric::StreamingState::IN);
+    // MyFile.GetDocumentLines();
 
-    SVDocumentSpace::SVDocument MyDocument("Datasets/sample.csv");
-    MyDocument.OpenFile(Genric::StreamingState::BINARY);
+    SVDocumentSpace::SVDocument MyDocument("../Datasets/sample.csv");
+    MyDocument.OpenFile(Genric::StreamingState::IN);
+
+    MyDocument.SVParser();
 
     return 0;
 

@@ -25,6 +25,7 @@ IncludeLists = [
 CPPSources = [
   'Machfly.cpp',
   'Genric/Filestream.cpp',
+  'SVDocument/SVDocumentParser.cpp',
   'SVDocument/SVDocument.cpp'
 ]
 

@@ -31,6 +31,34 @@ namespace Machfly::Genric
                 File.open(FilePath, std::ios::in);
                 break;
         }
+
+        OpenStatus = true;
+    }
+
+    std::fstream& Filestream::RetreiveStream()
+    {
+        return File;
+    }
+    
+    std::vector<std::string> Filestream::GetDocumentLines()
+    {
+        std::string CurrentLine;
+        std::vector<std::string> DocumentLines;
+
+        while (!File.eof())
+        {
+            std::getline(File, CurrentLine);
+            if(File.bad() || File.fail())
+            {
+                break;
+            }
+            // std::cout<<CurrentLine<<std::endl;
+
+            DocumentLines.push_back(CurrentLine);
+        }
+
+        return DocumentLines;
+        
     }
 
 } // namespace Machfly::Genric

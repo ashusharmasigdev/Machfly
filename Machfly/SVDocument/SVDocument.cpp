@@ -4,7 +4,7 @@ namespace Machfly::SVDocumentSpace
 {
     
     SVDocument::SVDocument(const std::string& _pFilepath = std::string())
-        : Filestream(_pFilepath)
+        : SVDocumentParser(_pFilepath)
     {}
 
 } // namespace Machfly::SVDocumentSpace
