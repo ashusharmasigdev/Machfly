@@ -19,6 +19,7 @@ namespace Machfly::SVDocumentSpace
             OpenFile(StreamingState::IN);
         }
 
+        /* It will Return all Cells in a stdVector<stdVector<String and then plug this data into dataGrid, it will called by dataGrid, there will be an already function ReadSV thenn datagrid will call here then it will return and dataGrid will fit the data Into self */
         InternalSVParser();
 
     }
@@ -47,7 +48,7 @@ namespace Machfly::SVDocumentSpace
             auto Cells = SVLineParser(DocumentLines.at(i));
 
             /* Insert Cells to Data grid */
-            
+
             std::cout<<Cells.at(1)<<std::endl;
         }
         
