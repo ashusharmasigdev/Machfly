@@ -57,9 +57,23 @@ namespace Machfly
             explicit Machframe()
             {}
 
+            /* Including Row Name and Column Name */
+            void GetCell(const size_t _Col, const size_t _Row)
+            {
+                std::cout << FrameData.at(_Col).at(_Row) << std::endl;
+            }
+
             void PrintDataGrid()
             {
-                std::cout << FrameData.at(4).at(1) << std::endl;
+                for (size_t i = 0; i < FrameData.size(); i++)
+                {
+                    for (size_t k = 0; k < FrameData.at(i).size(); k++)
+                    {
+                        GetCell(i,k);
+                    }
+                    
+                }
+                
             }
 
             template <typename T>

@@ -36,6 +36,8 @@ int main()
     // df.LoadSVDocument("Datasets/sample.csv", ",");
     df.LoadSVDocument("Datasets/sample.csv");
 
+    df.GetCell(1,1);
+
     df.PrintDataGrid();
     
 
