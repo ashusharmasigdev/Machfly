@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/ashusharmasigdev/Machfly">
-    <img src="Docs/Images/machfly.png" alt="Logo" width="80" height="80">
+    <img src="Docs/Images/machfly.png" alt="Logo" width="auto" height="147">
   </a>
 
 <h3 align="center">Machfly</h3>
