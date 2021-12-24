@@ -11,12 +11,20 @@
 
 #pragma once
 
+#include <Genric/Filestream.h>
+
+using namespace Machfly::Genric;
+
 namespace Machfly::SVDocumentSpace
 {
     
-    class SVDocument
+    class SVDocument : public Filestream
     {
-        
+
+        public:
+
+            SVDocument(const std::string& _pFilepath);
+    
     };
 
 } // namespace Machfly
