@@ -1,4 +1,4 @@
-<div id="top">![Build: Success](https://img.shields.io/badge/Build:%20Success%3F-brightgreen.svg?style=flat))</div>
+<div id="top"></div>
 
 <!-- PROJECT LOGO -->
 <br />
