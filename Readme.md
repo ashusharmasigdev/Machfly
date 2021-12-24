@@ -82,7 +82,7 @@ This project has AIM to achieve top Level in Data Science Including Analytics, O
 
 <div align="center">
   <a href="https://github.com/ashusharmasigdev/Machfly">
-    <img src="Docs/Images/Machfly_social.jpg" alt="banner" width="100%" height="auto">
+    <img src="Docs/Images/Machfly_Social.jpg" alt="banner" width="100%" height="auto">
   </a>
 </div>
 
