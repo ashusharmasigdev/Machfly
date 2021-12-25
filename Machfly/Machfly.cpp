@@ -3,6 +3,7 @@
 
 #include <Genric/Filestream.h>
 #include <SVDocument/SVDocument.h>
+#include <Datagrid/Gridcell.h>
 
 #ifdef MACHFLY_VERSION
 #define MACH_VERSION    MACHFLY_VERSION
@@ -27,10 +28,28 @@ int main()
     // MyFile.OpenFile(Genric::StreamingState::IN);
     // MyFile.GetDocumentLines();
 
-    SVDocumentSpace::SVDocument MyDocument("../Datasets/sample.csv");
-    MyDocument.OpenFile(Genric::StreamingState::IN);
+    // SVDocumentSpace::SVDocument MyDocument("../Datasets/sample.csv");
+    // MyDocument.OpenFile(Genric::StreamingState::IN);
 
-    MyDocument.SVParser();
+    // MyDocument.SVParser();
+
+    /* Datacell Test */
+    DatagridSpace::Gridcell MyCell("Hello");
+
+    std::string C;
+
+    /* Get Value of Cell In C */
+    MyCell >> C;
+
+    C = "OPP";
+
+    /* Set Value of Cell In C */
+    MyCell << C;
+
+    /* Get Value */
+    MyCell >> C;
+
+    std::cout<<C<<std::endl;
 
     return 0;
 

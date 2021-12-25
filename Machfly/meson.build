@@ -26,7 +26,8 @@ CPPSources = [
   'Machfly.cpp',
   'Genric/Filestream.cpp',
   'SVDocument/SVDocumentParser.cpp',
-  'SVDocument/SVDocument.cpp'
+  'SVDocument/SVDocument.cpp',
+  'Datagrid/Gridcell.cpp'
 ]
 
 LDArguments += CPPArguments

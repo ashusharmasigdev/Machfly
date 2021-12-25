@@ -5,7 +5,7 @@
 ## Functions & Components of SV
 
 ### Field or Cell
-### Row or Series
+### Row or Series [opeartor[]-(const Cell) will remove Cell from there]
 ### Data Type Convertors
 ### Hex Value etc.
 ### Get Row or Column By Its Name

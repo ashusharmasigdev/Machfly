@@ -1,17 +1,22 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/nebula/Projects/_/Machfly'
+echo !=== COMPILING Machfly/Datagrid/Gridcell.cpp
+mkdir -p Build/Datagrid
+g++ -IMachfly/ -DMACHFLY_VERSION='"0.2"' -DBUILD_ID='"20210420_xCsbbwuwnwop"' -DMACHFLY_LISCENCE='"Copyright@2021"' -fno-stack-protector -c -o Build/Datagrid/Gridcell.o Machfly/Datagrid/Gridcell.cpp
 echo !=== COMPILING Machfly/Genric/Filestream.cpp
 mkdir -p Build/Genric
 g++ -IMachfly/ -DMACHFLY_VERSION='"0.2"' -DBUILD_ID='"20210420_xCsbbwuwnwop"' -DMACHFLY_LISCENCE='"Copyright@2021"' -fno-stack-protector -c -o Build/Genric/Filestream.o Machfly/Genric/Filestream.cpp
- 
 echo !=== COMPILING Machfly/Machfly.cpp
 mkdir -p Build
 g++ -IMachfly/ -DMACHFLY_VERSION='"0.2"' -DBUILD_ID='"20210420_xCsbbwuwnwop"' -DMACHFLY_LISCENCE='"Copyright@2021"' -fno-stack-protector -c -o Build/Machfly.o Machfly/Machfly.cpp
-echo !=== COMPILING Machfly/SVDocument/SVDocumenParser.cpp
-mkdir -p Build/SVDocument
-g++ -IMachfly/ -DMACHFLY_VERSION='"0.2"' -DBUILD_ID='"20210420_xCsbbwuwnwop"' -DMACHFLY_LISCENCE='"Copyright@2021"' -fno-stack-protector -c -o Build/SVDocument/SVDocumenParser.o Machfly/SVDocument/SVDocumenParser.cpp
 echo !=== COMPILING Machfly/SVDocument/SVDocument.cpp
 mkdir -p Build/SVDocument
 g++ -IMachfly/ -DMACHFLY_VERSION='"0.2"' -DBUILD_ID='"20210420_xCsbbwuwnwop"' -DMACHFLY_LISCENCE='"Copyright@2021"' -fno-stack-protector -c -o Build/SVDocument/SVDocument.o Machfly/SVDocument/SVDocument.cpp
+echo !=== COMPILING Machfly/SVDocument/SVDocumentParser.cpp
+mkdir -p Build/SVDocument
+g++ -IMachfly/ -DMACHFLY_VERSION='"0.2"' -DBUILD_ID='"20210420_xCsbbwuwnwop"' -DMACHFLY_LISCENCE='"Copyright@2021"' -fno-stack-protector -c -o Build/SVDocument/SVDocumentParser.o Machfly/SVDocument/SVDocumentParser.cpp
+echo !=== COMPILING Machfly/SVDocument/SVDocumentRow.cpp
+mkdir -p Build/SVDocument
+g++ -IMachfly/ -DMACHFLY_VERSION='"0.2"' -DBUILD_ID='"20210420_xCsbbwuwnwop"' -DMACHFLY_LISCENCE='"Copyright@2021"' -fno-stack-protector -c -o Build/SVDocument/SVDocumentRow.o Machfly/SVDocument/SVDocumentRow.cpp
 make: Leaving directory '/home/nebula/Projects/_/Machfly'
  
