@@ -1,8 +1,14 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/nebula/Projects/_/Machfly'
-echo !=== COMPILING Machfly/Datagrid/Gridcell.cpp
+echo !=== COMPILING Machfly/Datagrid/Cell.cpp
 mkdir -p Build/Datagrid
-g++ -IMachfly/ -DMACHFLY_VERSION='"0.2"' -DBUILD_ID='"20210420_xCsbbwuwnwop"' -DMACHFLY_LISCENCE='"Copyright@2021"' -fno-stack-protector -c -o Build/Datagrid/Gridcell.o Machfly/Datagrid/Gridcell.cpp
+g++ -IMachfly/ -DMACHFLY_VERSION='"0.2"' -DBUILD_ID='"20210420_xCsbbwuwnwop"' -DMACHFLY_LISCENCE='"Copyright@2021"' -fno-stack-protector -c -o Build/Datagrid/Cell.o Machfly/Datagrid/Cell.cpp
+echo !=== COMPILING Machfly/Datagrid/Grid.cpp
+mkdir -p Build/Datagrid
+g++ -IMachfly/ -DMACHFLY_VERSION='"0.2"' -DBUILD_ID='"20210420_xCsbbwuwnwop"' -DMACHFLY_LISCENCE='"Copyright@2021"' -fno-stack-protector -c -o Build/Datagrid/Grid.o Machfly/Datagrid/Grid.cpp
+echo !=== COMPILING Machfly/Datagrid/Series.cpp
+mkdir -p Build/Datagrid
+g++ -IMachfly/ -DMACHFLY_VERSION='"0.2"' -DBUILD_ID='"20210420_xCsbbwuwnwop"' -DMACHFLY_LISCENCE='"Copyright@2021"' -fno-stack-protector -c -o Build/Datagrid/Series.o Machfly/Datagrid/Series.cpp
 echo !=== COMPILING Machfly/Genric/Filestream.cpp
 mkdir -p Build/Genric
 g++ -IMachfly/ -DMACHFLY_VERSION='"0.2"' -DBUILD_ID='"20210420_xCsbbwuwnwop"' -DMACHFLY_LISCENCE='"Copyright@2021"' -fno-stack-protector -c -o Build/Genric/Filestream.o Machfly/Genric/Filestream.cpp

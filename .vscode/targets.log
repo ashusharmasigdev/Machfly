@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Dec 25 12:32:52 2021
+# Make data base, printed on Sat Dec 25 17:30:05 2021
 
 # Variables
 
@@ -27,7 +27,7 @@ OBJDIR := Build
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-dd53d67e-e1c9-4f22-8c49-d41f9feaae75.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-38d4536a-041d-46a2-a665-c76eb85d404a.sock
 # environment
 VSCODE_CWD = /home/nebula
 # default
@@ -99,7 +99,7 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 9552
+VSCODE_PID = 34870
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -195,7 +195,7 @@ MAKE_VERSION := 4.3
 # environment
 MANAGERPID = 1509
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 9552
+GIO_LAUNCHED_DESKTOP_FILE_PID = 34870
 # environment
 _ = /usr/share/code/code
 # environment
@@ -239,7 +239,7 @@ GDMSESSION = ubuntu
 # makefile (from 'Makefile', line 20)
 rwildcard = $(foreach d,$(wildcard $(1:=/*)),$(call rwildcard,$d,$2) $(filter $(subst *,%,$2),$d))
 # variable set hash-table stats:
-# Load=114/1024=11%, Rehash=0, Collisions=7/191=4%
+# Load=114/1024=11%, Rehash=0, Collisions=7/199=4%
 
 # Pattern-specific Variable Values
 
@@ -247,25 +247,29 @@ rwildcard = $(foreach d,$(wildcard $(1:=/*)),$(call rwildcard,$d,$2) $(filter $(
 
 # Directories
 
+# Machfly/Datagrid/Grid.cpp (device 2057, inode 1793357): could not be opened.
 # Machfly/SVDocument (device 2057, inode 1803675): 8 files, no impossibilities.
 # Machfly (device 2057, inode 1802994): 7 files, no impossibilities.
-# Machfly/Datagrid/Gridcell.h (device 2057, inode 1790498): could not be opened.
+# Machfly/Datagrid/Grid.h (device 2057, inode 1793358): could not be opened.
 # Machfly/SVDocument/SVDocument.cpp (device 2057, inode 1786685): could not be opened.
-# Machfly/Datagrid (device 2057, inode 1803837): 4 files, no impossibilities.
+# Machfly/Datagrid (device 2057, inode 1803837): 8 files, no impossibilities.
 # Machfly/SVDocument/SVDocumentParser.h (device 2057, inode 1788283): could not be opened.
+# Machfly/Datagrid/Cell.h (device 2057, inode 1790498): could not be opened.
 # . (device 2057, inode 1802968): 19 files, no impossibilities.
 # Machfly/Genric/Filestream.h (device 2057, inode 1787402): could not be opened.
-# Machfly/Datagrid/Gridcell.cpp (device 2057, inode 1790528): could not be opened.
 # Machfly/SVDocument/SVDocumentRow.h (device 2057, inode 1788684): could not be opened.
 # Machfly/SVDocument/SVDocumentParser.cpp (device 2057, inode 1788269): could not be opened.
+# Machfly/Datagrid/Series.cpp (device 2057, inode 1720447): could not be opened.
 # Machfly/Genric (device 2057, inode 1803710): 4 files, no impossibilities.
 # Machfly/Genric/Filestream.cpp (device 2057, inode 1789391): could not be opened.
 # Machfly/Machfly.cpp (device 2057, inode 1787418): could not be opened.
 # Machfly/meson.build (device 2057, inode 1715772): could not be opened.
+# Machfly/Datagrid/Cell.cpp (device 2057, inode 1790528): could not be opened.
+# Machfly/Datagrid/Series.h (device 2057, inode 1792653): could not be opened.
 # Machfly/SVDocument/SVDocumentRow.cpp (device 2057, inode 1788674): could not be opened.
 # Machfly/SVDocument/SVDocument.h (device 2057, inode 1786680): could not be opened.
 
-# 42 files, no impossibilities in 17 directories.
+# 46 files, no impossibilities in 21 directories.
 
 # Implicit Rules
 
@@ -298,13 +302,26 @@ Build/Machfly.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-obj: Build/Datagrid/Gridcell.o Build/Genric/Filestream.o Build/Machfly.o Build/SVDocument/SVDocument.o Build/SVDocument/SVDocumentParser.o Build/SVDocument/SVDocumentRow.o
+obj: Build/Datagrid/Cell.o Build/Datagrid/Grid.o Build/Datagrid/Series.o Build/Genric/Filestream.o Build/Machfly.o Build/SVDocument/SVDocument.o Build/SVDocument/SVDocumentParser.o Build/SVDocument/SVDocumentRow.o
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+
+# Not a target:
+Machfly/Datagrid/Cell.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-25 14:03:09.644116206
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Build/Datagrid/Series.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .DEFAULT:
@@ -335,26 +352,26 @@ link:
 #  recipe to execute (from 'Makefile', line 36):
 	g++ $(OBJS) -o $(BUILDDIR)/Machfly
 
-Build/Datagrid/Gridcell.o: Machfly/Datagrid/Gridcell.cpp
+Build/Datagrid/Cell.o: Machfly/Datagrid/Cell.cpp
 #  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'Datagrid/Gridcell'
+#  Implicit/static pattern stem: 'Datagrid/Cell'
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # automatic
-# @ := Build/Datagrid/Gridcell.o
+# @ := Build/Datagrid/Cell.o
 # automatic
-# * := Datagrid/Gridcell
+# * := Datagrid/Cell
 # automatic
-# < := Machfly/Datagrid/Gridcell.cpp
+# < := Machfly/Datagrid/Cell.cpp
 # automatic
-# + := Machfly/Datagrid/Gridcell.cpp
+# + := Machfly/Datagrid/Cell.cpp
 # automatic
 # % := 
 # automatic
-# ^ := Machfly/Datagrid/Gridcell.cpp
+# ^ := Machfly/Datagrid/Cell.cpp
 # automatic
-# ? := Machfly/Datagrid/Gridcell.cpp
+# ? := Machfly/Datagrid/Cell.cpp
 # automatic
 # | := 
 # variable set hash-table stats:
@@ -363,13 +380,6 @@ Build/Datagrid/Gridcell.o: Machfly/Datagrid/Gridcell.cpp
 	echo !=== COMPILING $^
 	mkdir -p $(@D)
 	g++ $(GPPPARAMS) -c -o $@ $<
-
-# Not a target:
-Machfly/Datagrid/Gridcell.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2021-12-25 12:32:52.234607402
-#  File has been updated.
-#  Successfully updated.
 
 # Not a target:
 Build/SVDocument/SVDocument.o:
@@ -389,20 +399,26 @@ Build/SVDocument/SVDocumentParser.o:
 #  Modification time never checked.
 #  File has not been updated.
 
+# Not a target:
+Build/Datagrid/Grid.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
 # files hash-table stats:
-# Load=14/1024=1%, Rehash=0, Collisions=0/37=0%
+# Load=16/1024=2%, Rehash=0, Collisions=0/41=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 65 / storage = 1026 B / avg = 15 B
-# current buf: size = 8162 B / used = 1026 B / count = 65 / avg = 15 B
+# strcache buffers: 1 (0) / strings = 75 / storage = 1188 B / avg = 15 B
+# current buf: size = 8162 B / used = 1188 B / count = 75 / avg = 15 B
 
-# strcache performance: lookups = 89 / hit rate = 26%
+# strcache performance: lookups = 99 / hit rate = 24%
 # hash-table stats:
-# Load=65/8192=1%, Rehash=0, Collisions=0/89=0%
-# Finished Make data base on Sat Dec 25 12:32:52 2021
+# Load=75/8192=1%, Rehash=0, Collisions=0/99=0%
+# Finished Make data base on Sat Dec 25 17:30:05 2021
 
  
