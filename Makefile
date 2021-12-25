@@ -23,6 +23,8 @@ SRC = $(call rwildcard,$(SRCDIR),*.cpp)
 OBJS = $(patsubst $(SRCDIR)/%.cpp, $(OBJDIR)/%.o, $(SRC))
 DIRS = $(wildcard $(SRCDIR)/*)
 
+OUTS = $(call rwildcard,$(BUILDDIR)/Machfly.app.p,*.o)
+
 obj: $(OBJS)
 
 
@@ -41,3 +43,10 @@ run:
 all: obj	\
 	 link	\
 	 run
+
+
+buildlib:
+	ar -rc $(BUILDDIR)/libmachfly.a $(OUTS)
+
+indexlib:
+	nm $(BUILDDIR)/libmachfly.a

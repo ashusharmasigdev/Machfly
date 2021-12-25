@@ -32,6 +32,6 @@ namespace Machfly::SVDocumentSpace
 
             std::vector<std::string> SVLineParser(const std::string _pLine);
 
-    };    
+    };
 
 } // namespace Machfly::SVDocumentSpace
