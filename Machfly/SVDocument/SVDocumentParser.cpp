@@ -48,11 +48,15 @@ namespace Machfly::SVDocumentSpace
             auto Cells = SVLineParser(DocumentLines.at(i));
 
             /* Insert Cells to Data grid */
+            /* Fitting in Datagrid
 
-            // std::cout<<Cells.at(1)<<std::endl;
+            * Create VectorCells by Size of cellsVector in each time
+            * Create VectorSeries by Size of LineSIze
+            
+            */
+
+            std::cout<<Cells.at(0)<<std::endl;
         }
-        
-        
     }
 
     std::vector<std::string> SVDocumentParser::SVLineParser(const std::string _pLine)

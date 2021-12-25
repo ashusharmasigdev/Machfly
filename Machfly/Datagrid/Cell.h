@@ -6,18 +6,20 @@
 namespace Machfly::DatagridSpace
 {
     
-    class Gridcell
+    class Cell
     {
 
         public:
 
-            Gridcell(const std::string& _pCellContent);
+            Cell(const std::string& _pCellContent);
 
             /* Convert to Template Later */
             void operator>>(std::string& _pStringPtr);
             void operator<<(std::string& _pStringPtr);
 
             /* operator[](x,y) to access subcells */
+
+            /* For Series */
 
         private:
 

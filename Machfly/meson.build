@@ -27,7 +27,9 @@ CPPSources = [
   'Genric/Filestream.cpp',
   'SVDocument/SVDocumentParser.cpp',
   'SVDocument/SVDocument.cpp',
-  'Datagrid/Gridcell.cpp'
+  'Datagrid/Cell.cpp',
+  'Datagrid/Series.cpp',
+  'Datagrid/Grid.cpp'
 ]
 
 LDArguments += CPPArguments
