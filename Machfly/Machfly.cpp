@@ -1,9 +1,11 @@
 /* Tests */
 #include <iostream>
 
-#include "Datafly/Machframe.h"
-#include "Parsers/SVDocumentClass.h"
-#include "Parsers/rapidcsv.h"
+#include <Genric/Filestream.h>
+#include <SVDocument/SVDocument.h>
+#include <Datagrid/Cell.h>
+#include <Datagrid/Series.h>
+#include <Datagrid/Grid.h>
 
 #ifdef MACHFLY_VERSION
 #define MACH_VERSION    MACHFLY_VERSION
@@ -23,23 +25,66 @@ int main()
 
     AppHeader();
 
+    /* Filestream Test */
+    // Genric::Filestream MyFile("../Datasets/sample.csv");
+    // MyFile.OpenFile(Genric::StreamingState::IN);
+    // MyFile.GetDocumentLines();
 
-    // SVDocument::Document MySVDocument("Datasets/sample.csv", SVDocument::SeparatorArgs(',', true, false, false, true), SVDocument::LineReaderArgs(false, '#', false), SVDocument::LabelArgs(0, -1));
-    // rapidcsv::Document Doc("Datasets/sample.csv");
+    SVDocumentSpace::SVDocument MyDocument("../Datasets/sample.csv");
+    MyDocument.OpenFile(Genric::StreamingState::IN);
 
-    // std::cout << Doc.GetCell<int>(1,3) << std::endl;
+    MyDocument.SVParser();
 
-    Machframe df;
+    /* Datacell Test */
+    // DatagridSpace::Cell MyCell("Hello");
+    // DatagridSpace::Cell MyCell2("OHO");
+    // DatagridSpace::Cell MyCell3("OGO");
+    DatagridSpace::Cell MyCell3 = DatagridSpace::Cell("");
 
-    // df.SetSize(8,60);   /* ColName, RowName */
-    // df.SetCell<std::string>(0, 0, "aa");
-    // df.LoadSVDocument("Datasets/sample.csv", ",");
-    df.LoadSVDocument("Datasets/sample.csv");
+    std::string C;
 
-    df.GetCell(1,1);
+    // /* Get Value of Cell In C */
+    MyCell3 >> C;
 
-    df.PrintDataGrid();
+    // C = "OPP";
+
+    // /* Set Value of Cell In C */
+    // MyCell << C;
+
+    // /* Get Value */
+    // MyCell >> C;
+
+    // std::cout<<C<<std::endl;
+
+    /* DataSeries Test */
+
+    // std::vector<DatagridSpace::Cell> _Row;
+    // _Row.push_back(MyCell);
+    // _Row.push_back(MyCell2);
+    // _Row.push_back(MyCell3);
+
+    // DatagridSpace::Series MySeries(_Row);
+    // DatagridSpace::Series MySeries2(_Row);
+    // DatagridSpace::Series MySeries3(_Row);
+    // DatagridSpace::Series MySeries4(_Row);
+
+    // MySeries[2] >> C;
+
+    // std::cout<<C<<std::endl;
+
+
+    // /* Datagrid Test */
+    // std::vector<DatagridSpace::Series> SeriesGroup;
+    // SeriesGroup.push_back(MySeries);
+    // SeriesGroup.push_back(MySeries2);
+    // SeriesGroup.push_back(MySeries3);
+    // SeriesGroup.push_back(MySeries4);
+
+    // DatagridSpace::Grid MyGrid(SeriesGroup);
+
+    // MyGrid[0][0] >> C;
     
+    // std::cout<<C<<std::endl;
 
     return 0;
 

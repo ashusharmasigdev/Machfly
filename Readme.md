@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/ashusharmasigdev/Machfly">
-    <img src="Docs/Images/machfly.jpeg" alt="Logo" width="80" height="80">
+    <img src="Docs/Images/machfly.png" alt="Logo" width="auto" height="147">
   </a>
 
 <h3 align="center">Machfly</h3>
@@ -79,6 +79,12 @@ This project has AIM to achieve top Level in Data Science Including Analytics, O
 
 <!-- GETTING STARTED -->
 ## Getting Started
+
+<div align="center">
+  <a href="https://github.com/ashusharmasigdev/Machfly">
+    <img src="Docs/Images/Machfly_Social.jpg" alt="banner" width="100%" height="auto">
+  </a>
+</div>
 
 Following is Instructions to use Machfly in your own Dream Projects!
 <!-- 

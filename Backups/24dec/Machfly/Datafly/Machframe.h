@@ -36,7 +36,6 @@ namespace Machfly
         std::string DocumentName;
     };
     
-    
 
     class Machframe
     {
