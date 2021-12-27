@@ -8,6 +8,12 @@ using namespace Machfly::SVDocumentSpace;
 
 namespace Machfly::DatagridSpace
 {
+
+    enum class Returning
+    {
+        _RDocument,
+        _RGrid
+    };
     
     class Dataplain
     {
@@ -18,6 +24,11 @@ namespace Machfly::DatagridSpace
 
             /* Will Load the Data File */
             void operator>>(const std::string& _pFileName);
+
+            // template<typename T>
+            // void operator<<(T*& _pReturning);
+            void operator<<(SVDocument*& _pReturning);
+            void operator<<(Grid*& _pReturning);
 
         private:
 
